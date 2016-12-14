@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp">
+
+    <TextView
+        android:id="@+id/tv_fileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试视频.mp4"
+        android:layout_alignParentTop ="true"
+        android:layout_alignParentLeft="true"/>
+        
+        <ProgressBar
+            android:id="@+id/pb_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/tv_fileName"
+            android:layout_toLeftOf ="@+id/line_download"
+            android:layout_alignParentLeft="true"
+            android:progressDrawable="@drawable/progressbar_mini"
+            />
+    <LinearLayout
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignTop="@id/tv_fileName"
+        android:layout_alignBottom="@+id/total"
+        android:gravity="center_vertical"
+        android:id="@+id/line_download"
+        >
+        <ImageView 
+            android:id="@+id/download_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitCenter"
+            android:background="@mipmap/download"
+
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pb_progress"
+        android:layout_alignLeft="@id/pb_progress"
+        android:layout_alignParentLeft="true"
+        android:text="0%" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/pb_progress"
+        android:layout_below="@+id/pb_progress"
+        android:text="0MB"
+         />
+    <TextView
+        android:id="@+id/fengge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/total"
+        android:layout_alignBottom="@+id/total"
+        android:layout_toLeftOf="@+id/total"
+        android:text="/"
+        android:visibility="visible"
+        />
+    <TextView
+        android:id="@+id/haved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/fengge"
+        android:layout_alignBottom="@+id/fengge"
+        android:layout_toLeftOf="@+id/fengge"
+        android:text="0MB"
+        />
+
+</RelativeLayout>
